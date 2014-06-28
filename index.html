@@ -1,0 +1,126 @@
+
+<!doctype html> 
+<html lang="en"> 
+	<head> 
+		<title>The Climate Cube</title> 
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> 
+		<style> 
+		  html {
+			height: 100%;
+		  }
+		  body {
+			margin: 0;
+			padding: 0;
+			background: #000000;
+			color: #ffffff;
+			font-family: sans-serif;
+			font-size: 13px;
+			line-height: 20px;
+			height: 100%;
+		  }
+ 
+		  #currentInfo {
+			width: 245px;
+			position: absolute;
+			left: 20px;
+			top: 63px;
+	
+			background-color: rgba(0,0,0,0);
+	
+			border-top: 1px solid rgba(255,255,255,1);
+			padding: 5px;
+		  }
+ 
+		  #title {
+			position: absolute;
+			top: 20px;
+			width: 270px;
+			left: 20px;
+			background-color: rgba(0,0,0,0);
+			border-radius: 20px;
+			font: 30px Georgia;
+			padding: 5px;
+		  }
+	
+		  .controlls {
+			font: 16px Georgia;
+			line-height: 26px;
+			height: 30px;
+			text-align: left;
+			float: left top;
+			width: 270px;
+			color: rgba(255, 255, 255, 1);
+		  }
+
+
+		#fb-bottomContainer {
+			position:absolute;
+			bottom: 15px;
+			left: 50%;
+			margin-left: -100px;
+		}
+		</style> 
+	</head> 
+	<body> 
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+  		<div id="container"></div> 
+		
+
+		<div id="fb-bottomContainer">
+			
+			 	<div class="fb-like" data-href="http://www.bitsofbeards.co.uk/TheClimateCube" data-send="false" data-width="450" data-show-faces="false"></div>
+			</div>
+		
+
+        <div id="title"> 
+        The Climate Cube
+        </div> 
+        
+  		<div id="currentInfo"> 
+        	<br> 
+            <span class="controlls">Left mouse: Click and drag to spin, click to pick up people and cars.</span> 
+       		<br><br> 
+       		<span class="controlls">Middle mouse: Click and drag to pan, scroll wheel to zoom.</span> 
+       </div> 
+ 
+        <!-- enblefor release  <script src="src/java/three/build/Three.js"></script>  --> 
+        <script src="src/javascript/three/build/custom/ThreeDebug.js"></script> 
+        <script type='text/javascript' src="src/javascript/datGUI/dat.gui.min.js"></script> 
+        <script src="src/javascript/three/examples/js/Detector.js"></script> 
+        <!--<script src="src/java/three/examples/js/Stats.js"></script> --> 
+        
+        <script src="src/javascript/Main.js"></script> 
+        <script src="src/javascript/TwiterPlane.js"></script> 
+        <script src="src/javascript/AnimatedMesh.js"></script> 
+        <script src="src/javascript/PathFollower.js"></script> 
+        <script src="src/javascript/Pedestrian.js"></script> 
+        <script src="src/javascript/Cloud.js"></script> 
+        <script src="src/javascript/AnimatedMaterial.js"></script> 
+        <script src="src/javascript/JSONFileReader.js"></script> 
+        <script src="src/javascript/Path.js"></script> 
+        <script src="src/javascript/Utility.js"></script> 
+        <script src="src/javascript/IsoCamera.js"></script> 
+        
+        <script src="src/javascript/Car.js"></script> 
+ 
+        
+        <script> 
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+ 
+			init();
+			animate();
+		</script> 
+ 
+	</body> 
+</html> 
+ 
